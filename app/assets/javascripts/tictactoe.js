@@ -117,7 +117,6 @@ function doTurn(element){
 
 function clearGame()
 {
-  debugger;
   resetBoard();
   turn = 0;
   currentGame = 0;  
@@ -157,7 +156,6 @@ function getGame()
 {
   $.get("/games/"+parseInt(this.dataset["id"]))
     .done(function(data){
-      debugger;
       currentGame = parseInt(data.data["id"]);
       populateBoard(data.data["attributes"]["state"]);
     });    
